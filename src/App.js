@@ -33,7 +33,7 @@ const App = () => {
 
     try {
       const flight = await fetchFlightById(searchTerm);
-      if (flight) {
+      if (flight && flight.flight !== "") {
         setFlights([flight]);
         setNotFound(false);
         setShowTerminals(true);
